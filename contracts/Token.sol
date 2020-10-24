@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.5.0 <0.8.0;
 
-contract Token {
+import "./Ownable.sol";
+
+contract Token is Ownable {
     function totalSupply() public view returns (uint256 supply) {}
 
     function balanceOf(address _owner) public view returns (uint256 balance) {}

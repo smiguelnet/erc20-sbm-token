@@ -20,21 +20,18 @@ contract SmiguelToken is Token {
     mapping(address => mapping(address => uint256)) allowed;
 
     constructor() public {
-        balances[msg.sender].add(10000000);
+        balances[msg.sender] = _totalSupply;
     }
 
-    function totalSupply() public view returns (uint256 supply) {
+    function totalSupply() public view returns (uint256) {
         return _totalSupply;
     }
 
-    function balanceOf(address _owner) public view returns (uint256 balance) {
+    function balanceOf(address _owner) public view returns (uint256) {
         return balances[_owner];
     }
 
-    function transfer(address _to, uint256 _value)
-        public
-        returns (bool success)
-    {
+    function transfer(address _to, uint256 _value) public returns (bool) {
         require(_value <= balances[msg.sender]);
         balances[msg.sender] = balances[msg.sender].sub(_value);
         balances[_to] = balances[_to].add(_value);
@@ -46,7 +43,7 @@ contract SmiguelToken is Token {
         address _from,
         address _to,
         uint256 _value
-    ) public returns (bool success) {
+    ) public returns (bool) {
         require(_value <= balances[_to]);
         require(_value <= allowed[_to][msg.sender]);
 
@@ -58,10 +55,7 @@ contract SmiguelToken is Token {
         return true;
     }
 
-    function approve(address _spender, uint256 _value)
-        public
-        returns (bool success)
-    {
+    function approve(address _spender, uint256 _value) public returns (bool) {
         allowed[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
         return true;
@@ -70,7 +64,7 @@ contract SmiguelToken is Token {
     function allowance(address _owner, address _spender)
         public
         view
-        returns (uint256 remaining)
+        returns (uint256)
     {
         return allowed[_owner][_spender];
     }
