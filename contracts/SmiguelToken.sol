@@ -19,6 +19,10 @@ contract SmiguelToken is Token {
     mapping(address => uint256) balances;
     mapping(address => mapping(address => uint256)) allowed;
 
+    constructor() public {
+        balances[msg.sender].add(10000000);
+    }
+
     function totalSupply() public view returns (uint256 supply) {
         return _totalSupply;
     }

@@ -1,0 +1,63 @@
+======================
+
+> Network name: 'rinkeby'
+> Network id: 4
+> Block gas limit: 10000000 (0x989680)
+
+# 1_initial_migration.js
+
+Network parameter: rinkeby
+Accounts parameter: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+
+Deploying 'Migrations'
+
+---
+
+> transaction hash: 0x66f25257bd75ceb0f210c2c551e766c30c559272f5a2e8693c6090dd561e23ff
+> Blocks: 0 Seconds: 9
+> contract address: 0x1168C758fac74552D62fA19668Bf2796fB467a33
+> block number: 7425867
+> block timestamp: 1603545495
+> account: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+> balance: 4.65135696
+> gas used: 191943 (0x2edc7)
+> gas price: 5 gwei
+> value sent: 0 ETH
+> total cost: 0.000959715 ETH
+
+> Saving migration to chain.
+> Saving artifacts
+
+---
+
+> Total cost: 0.000959715 ETH
+
+# 2_deploy_contracts.js
+
+Deploying 'SmiguelToken'
+
+---
+
+> transaction hash: 0x32de94d1eff2afd1ed655e886a854dff158d1e6ad7bd47573b7803d132df80eb
+> Blocks: 0 Seconds: 9
+> contract address: 0x0488709d0b3fbC1E5911747a4E993ABA796f9d47
+> block number: 7425870
+> block timestamp: 1603545540
+> account: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+> balance: 4.646816315
+> gas used: 865791 (0xd35ff)
+> gas price: 5 gwei
+> value sent: 0 ETH
+> total cost: 0.004328955 ETH
+
+> Saving migration to chain.
+> Saving artifacts
+
+---
+
+> Total cost: 0.004328955 ETH
+
+# Summary
+
+> Total deployments: 2
+> Final cost: 0.00528867 ETH
