@@ -1,63 +1,60 @@
+Starting migrations...
 ======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 10004824 (0x98a958)
 
-> Network name: 'rinkeby'
-> Network id: 4
-> Block gas limit: 10000000 (0x989680)
 
-# 1_initial_migration.js
+1_initial_migration.js
+======================
+Using network: rinkeby
 
-Network parameter: rinkeby
-Accounts parameter: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x1b32b1555301d1061ec388a3c526d790d440016dd64679e36f85a7e570b400ce
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x2331Fd2ebeF9eaa6f84Cf2f2ff975CFcc05C8B8c
+   > block number:        7426512
+   > block timestamp:     1603555176
+   > account:             0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+   > balance:             4.599583295
+   > gas used:            191943 (0x2edc7)
+   > gas price:           100 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0191943 ETH
 
-Deploying 'Migrations'
 
----
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0191943 ETH
 
-> transaction hash: 0x66f25257bd75ceb0f210c2c551e766c30c559272f5a2e8693c6090dd561e23ff
-> Blocks: 0 Seconds: 9
-> contract address: 0x1168C758fac74552D62fA19668Bf2796fB467a33
-> block number: 7425867
-> block timestamp: 1603545495
-> account: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
-> balance: 4.65135696
-> gas used: 191943 (0x2edc7)
-> gas price: 5 gwei
-> value sent: 0 ETH
-> total cost: 0.000959715 ETH
 
-> Saving migration to chain.
-> Saving artifacts
+2_deploy_contracts.js
+=====================
 
----
+   Replacing 'SmiguelToken'
+   ------------------------
+   > transaction hash:    0x339162a797000259b0c20be7169139dda062b2f4c59e8d4cc404312e1b7026c9
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x4524719C949e98de97E475f49Ef8a337Ed7Ad548
+   > block number:        7426514
+   > block timestamp:     1603555206
+   > account:             0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
+   > balance:             4.508476695
+   > gas used:            868728 (0xd4178)
+   > gas price:           100 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0868728 ETH
 
-> Total cost: 0.000959715 ETH
 
-# 2_deploy_contracts.js
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0868728 ETH
 
-Deploying 'SmiguelToken'
 
----
-
-> transaction hash: 0x32de94d1eff2afd1ed655e886a854dff158d1e6ad7bd47573b7803d132df80eb
-> Blocks: 0 Seconds: 9
-> contract address: 0x0488709d0b3fbC1E5911747a4E993ABA796f9d47
-> block number: 7425870
-> block timestamp: 1603545540
-> account: 0x104bFb601Cf3fcc5d40Fc24Bc3c69fECF933Cad8
-> balance: 4.646816315
-> gas used: 865791 (0xd35ff)
-> gas price: 5 gwei
-> value sent: 0 ETH
-> total cost: 0.004328955 ETH
-
-> Saving migration to chain.
-> Saving artifacts
-
----
-
-> Total cost: 0.004328955 ETH
-
-# Summary
-
-> Total deployments: 2
-> Final cost: 0.00528867 ETH
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.1060671 ETH

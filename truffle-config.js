@@ -22,8 +22,8 @@ module.exports = {
         return new HDWalletProvider(WALLET_MNEMONIC, "https://rinkeby.infura.io/v3/" + INFURA_KEY);
       },
       network_id: "*" ,
-      gas: 9900000,
-      gasPrice: 5000000000
+      gas: 4712388,
+      gasPrice: 100000000000
     }
   },
   contracts_directory: './contracts/',

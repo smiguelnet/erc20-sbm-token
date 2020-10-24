@@ -9,6 +9,8 @@ const OWNER_ADDRESS = process.env.OWNER_ADDRESS;
 const NFT_CONTRACT_ADDRESS = process.env.NFT_CONTRACT_ADDRESS;
 const NETWORK = process.env.NETWORK;
 
+console.log(INFURA_KEY)
+
 if (!INFURA_KEY || !WALLET_MNEMONIC || !OWNER_ADDRESS || !NFT_CONTRACT_ADDRESS || !NETWORK) {
     console.error("Invalid configuration. Infura key, wallet mnemonic, owner and network are all required");
     process.exit(0);
@@ -50,9 +52,9 @@ const main = async () => {
     const web3Instance = new web3(provider);
 
     console.log(`NFT Contract Address: ${NFT_CONTRACT_ADDRESS}`);
-    const nftContract = new web3Instance.eth.Contract(NFT_TOKEN_ABI, NFT_CONTRACT_ADDRESS, {gasLimit: "1000000"});
+    const nftContract = new web3Instance.eth.Contract(NFT_TOKEN_ABI, NFT_CONTRACT_ADDRESS, {gasLimit: "4712388"});
     
-    const mintOperation = await nftContract.methods.transfer(OWNER_ADDRESS, 10000).send({from: OWNER_ADDRESS});
+    const mintOperation = await nftContract.methods.transfer("0x076C0BD3d81D72862F0421caC23b2F769dCf4d4B", 1000000).send({from: OWNER_ADDRESS});
     console.log(mintOperation);
 
     process.exit(0);
